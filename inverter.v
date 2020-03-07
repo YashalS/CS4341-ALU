@@ -1,19 +1,32 @@
 
 //16bit inverter  
-module inv16(A,B);
+module inv16(in, out);
     
-  input [15:0] A;
-  output [15:0] B;
-  //-- Assign the inverse of the input, to the output
-  assign B = ~A;
-   
+  input [15:0] in;
+  output [15:0] out;
+  not not1(out[0], in[0]),
+    not2(out[1], in[1]),
+    not3(out[2], in[2]),
+    not4(out[3], in[3]),
+    not5(out[4], in[4]),
+    not6(out[5], in[5]),
+    not7(out[6], in[6]),
+    not8(out[7], in[7]),
+    not9(out[8], in[8]),
+    not10(out[9], in[9]),
+    not11(out[10], in[10]),
+    not11(out[11], in[11]),
+    not12(out[12], in[12]),
+    not13(out[13], in[13]),
+    not14(out[14], in[14]),
+    not15(out[15], in[15]);
 endmodule
 
 //16 bit inverter test module
 module main;
 reg[15:0] i = 16'hff;
 wire[15:0] out ;
-inv zap(i, out);
+inv16 zap(i, out);
   initial 
     begin
     #10
