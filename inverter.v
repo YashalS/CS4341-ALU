@@ -15,11 +15,11 @@ module inv16(in, out);
     not9(out[8], in[8]),
     not10(out[9], in[9]),
     not11(out[10], in[10]),
-    not11(out[11], in[11]),
-    not12(out[12], in[12]),
-    not13(out[13], in[13]),
-    not14(out[14], in[14]),
-    not15(out[15], in[15]);
+    not12(out[11], in[11]),
+    not13(out[12], in[12]),
+    not14(out[13], in[13]),
+    not15(out[14], in[14]),
+    not16(out[15], in[15]);
 endmodule
 
 //16 bit inverter test module
